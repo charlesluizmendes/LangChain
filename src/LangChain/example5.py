@@ -14,6 +14,7 @@ from langchain_core.prompts import (
 from langchain_core.messages import SystemMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
+
 from dotenv import load_dotenv
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
