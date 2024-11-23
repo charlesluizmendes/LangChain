@@ -26,6 +26,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
+print(device)
 
 
 # Parametros

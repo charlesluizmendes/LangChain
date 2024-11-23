@@ -26,6 +26,51 @@ $ pip install langchain-chroma
 $ pip install -r requirements.txt
 ```
 
+## Ececutar na CPU:
+
+Se deseja executar os scripts em uma CPU basta nao utilizar o 'BitsAndBytesConfig', removendo do 'AutoModelForCausalLM':
+
+Ex:
+
+```
+quantization_config = BitsAndBytesConfig(
+    load_in_4bit=True, 
+    bnb_4bit_use_double_quant=True, 
+    bnb_4bit_quant_type="nf4", 
+    bnb_4bit_compute_dtype=torch.bfloat16
+)
+
+model = AutoModelForCausalLM.from_pretrained(model_id) # basta remover o quantization_config aqui.
+```
+
+## Executar na GPU (cuda):
+
+Execute o seguinte comando para listar os drivers de video e a respectiva versão da CUDA instalada:
+
+```
+$ nvidia-smi
+
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.94                 Driver Version: 560.94         CUDA Version: 12.6     |
++-----------------------------------------+------------------------+----------------------+
+```
+
+* Embora o driver da NVIDIA suporte CUDA 12.6, ele é retrocompatível com versões anteriores de CUDA, como 12.1, 11.8, etc. Isso significa que o PyTorch, ao ser instalado com suporte a CUDA 12.1, ainda pode funcionar perfeitamente no seu sistema com CUDA 12.6.
+
+Apos isso instale a versão correta da CUDA, no caso a versão '12':
+
+```
+$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 :: 
+```
+
+Verifique se a ver~soa foi instalada corretamente, e se retornou 'True':
+
+```
+$ python -c "import torch; print(torch.cuda.is_available())"
+
+True
+```
+
 ## Login do HuggingFace:
 
 ```

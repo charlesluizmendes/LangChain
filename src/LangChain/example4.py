@@ -16,8 +16,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
+print(device)
 
-# Define o modelo
 model_id = "microsoft/Phi-3-mini-4k-instruct"
 
 quantization_config = BitsAndBytesConfig(

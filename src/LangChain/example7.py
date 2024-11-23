@@ -13,6 +13,7 @@ from langchain_core.runnables import RunnableLambda
 from dotenv import load_dotenv
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
+print(device)
 
 load_dotenv()
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
