@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 load_dotenv()
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACE_API_KEY")
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 model_id = "meta-llama/Llama-3.2-3B-Instruct"
 

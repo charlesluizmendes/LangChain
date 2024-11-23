@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 load_dotenv()
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACE_API_KEY")
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 torch.random.manual_seed(42)
 

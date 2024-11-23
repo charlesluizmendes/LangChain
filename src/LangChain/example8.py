@@ -12,7 +12,7 @@ import re
 load_dotenv()
 
 # Obtém o token da API da Hugging Face do arquivo .env
-huggingface_api_key = os.getenv("HUGGINGFACE_API_KEY")
+huggingface_api_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 if not huggingface_api_key:
     raise ValueError("Token da API da Hugging Face não encontrado no arquivo .env!")
