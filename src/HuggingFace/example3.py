@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
+# device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 load_dotenv()
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
@@ -19,6 +20,7 @@ quantization_config = BitsAndBytesConfig(
 
 model_id = "meta-llama/Llama-3.2-3B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=quantization_config)
+# model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16).to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 prompt = ("Quem foi a primeira pessoa no espaço?")
