@@ -10,6 +10,7 @@ $ pip install -q torch
 $ pip install -q python-dotenv
 $ pip install -q transformers
 $ pip install -q accelerate
+$ pip install -q bitsandbytes
 $ pip install -q langchain
 $ pip install -q huggingface_hub
 $ pip install -q langchain_openai
