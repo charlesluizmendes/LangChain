@@ -5,19 +5,19 @@ Projeto de exemplo de utilização de LangChain
 ## Pacotes utilizados:
 
 ```
-$ pip install -q bs4
-$ pip install -q torch
-$ pip install -q python-dotenv
-$ pip install -q transformers
-$ pip install -q accelerate
-$ pip install -q bitsandbytes
-$ pip install -q langchain
-$ pip install -q huggingface_hub
-$ pip install -q langchain_openai
-$ pip install -q langchain_community
-$ pip install -q langchain-huggingface
-$ pip install -q langchain-ollama 
-$ pip install -q langchain-chroma
+$ pip install bs4
+$ pip install torch
+$ pip install python-dotenv
+$ pip install transformers
+$ pip install accelerate
+$ pip install bitsandbytes
+$ pip install huggingface_hub
+$ pip install langchain
+$ pip install langchain_openai
+$ pip install langchain_community
+$ pip install langchain-huggingface
+$ pip install langchain-ollama 
+$ pip install langchain-chroma
 ```
 
 ## Instalar pacotes:
