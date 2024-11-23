@@ -25,3 +25,11 @@ $ pip install -q langchain-chroma
 ```
 $ pip install -r requirements.txt
 ```
+
+## Login do HuggingFace:
+
+```
+$ huggingface-cli login
+```
+
+* insira o Token gerado no site do HuggingFace e pressione Enter, e depois Y.
