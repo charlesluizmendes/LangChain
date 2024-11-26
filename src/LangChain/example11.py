@@ -89,7 +89,7 @@ template_rag = """
 <|start_header_id|>system<|end_header_id|>
 Você é um assistente virtual prestativo e está respondendo perguntas gerais.
 Use os seguintes pedaços de contexto recuperado para responder à pergunta.
-Se você não sabe a resposta, apenas diga que não sabe. Mantenha a resposta concisa.
+Se você não sabe a resposta, apenas diga que não sabe. Mantenha a resposta concisa e detalhada.
 <|eot_id|>
 <|start_header_id|>user<|end_header_id|>
 Pergunta: {question}
@@ -112,7 +112,7 @@ chain_rag = ({"context": retriever | format_docs, "question": RunnablePassthroug
             | llm
             | StrOutputParser())
 
-res = chain_rag.invoke("Emma Stone?")
+res = chain_rag.invoke("Quem venceu o Oscar de Melhor Ator?")
 
 print()
 print(res)

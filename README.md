@@ -18,6 +18,7 @@ $ pip install langchain_community
 $ pip install langchain-huggingface
 $ pip install langchain-ollama 
 $ pip install langchain-chroma
+$ pip install wikipedia
 ```
 
 ## Instalar pacotes:

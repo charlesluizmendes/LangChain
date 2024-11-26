@@ -58,5 +58,5 @@ prompt = ChatPromptTemplate.from_messages([
 
 chain_str = prompt | llm | StrOutputParser()
 
-for chunk in chain_str.stream({"paragraph": "3", "topic": "Senhor dos Aneis"}):
+for chunk in chain_str.stream({"paragraph": "3", "topic": "Yong Sheldon"}):
   print(chunk, end="")
