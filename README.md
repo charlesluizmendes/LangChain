@@ -27,7 +27,7 @@ $ pip install wikipedia
 $ pip install -r requirements.txt
 ```
 
-## Ececutar na CPU:
+## Executar na CPU:
 
 Se deseja executar os scripts em uma CPU basta nao utilizar o 'BitsAndBytesConfig', removendo do 'AutoModelForCausalLM':
 
@@ -50,7 +50,7 @@ Execute o seguinte comando para listar os drivers de video e a respectiva versã
 
 ```
 $ nvidia-smi
-
+# Deverá mostrar algo como isso logo abaixo
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 560.94                 Driver Version: 560.94         CUDA Version: 12.6     |
 +-----------------------------------------+------------------------+----------------------+
@@ -58,7 +58,7 @@ $ nvidia-smi
 
 * Embora o driver da NVIDIA suporte CUDA 12.6, ele é retrocompatível com versões anteriores de CUDA, como 12.1, 11.8, etc. Isso significa que o PyTorch, ao ser instalado com suporte a CUDA 12.1, ainda pode funcionar perfeitamente no seu sistema com CUDA 12.6.
 
-Apos isso instale a versão correta da CUDA, no caso a versão '12':
+Apos isso instale a versão correta da CUDA, no caso a versão '12.1':
 
 ```
 $ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 :: 
@@ -68,7 +68,7 @@ Verifique se a ver~soa foi instalada corretamente, e se retornou 'True':
 
 ```
 $ python -c "import torch; print(torch.cuda.is_available())"
-
+# Deverá mostrar algo como isso logo abaixo
 True
 ```
 
