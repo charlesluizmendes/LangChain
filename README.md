@@ -75,10 +75,11 @@ $ python -c "import torch; print(torch.cuda.is_available())"
 True
 ```
 
-## Login do HuggingFace:
+## ChatPDF
+
+Para executar o projeto do ChatPDF, basta entrar no diretorio do projeto e executar os scripts abaixo:
 
 ```
-$ huggingface-cli login
+$ python chatPdf.py
+$ streamlit run chatPdf.py  
 ```
-
-* insira o Token gerado no site do HuggingFace e pressione Enter, e depois Y.

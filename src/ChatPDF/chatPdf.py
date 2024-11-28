@@ -106,7 +106,7 @@ def config_rag_chain(retriever):
     # Prompt para perguntas e respostas (Q&A)
     qa_prompt_template = """Você é um assistente virtual prestativo e está respondendo perguntas gerais. 
     Use os seguintes pedaços de contexto recuperado para responder à pergunta. 
-    Se você não sabe a resposta, apenas diga que não sabe. Mantenha a resposta concisa. 
+    Se você não sabe a resposta, apenas diga que não sabe. Mantenha a resposta concisa e detalhada. 
     Responda em português. \n\n
     Pergunta: {input} \n
     Contexto: {context}"""
