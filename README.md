@@ -19,6 +19,9 @@ $ pip install langchain-huggingface
 $ pip install langchain-ollama 
 $ pip install langchain-chroma
 $ pip install wikipedia
+$ pip install faiss-cpu
+$ pip install streamlit
+$ pip install pypdf
 ```
 
 ## Instalar pacotes:
