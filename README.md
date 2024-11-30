@@ -75,11 +75,11 @@ $ python -c "import torch; print(torch.cuda.is_available())"
 True
 ```
 
-## ChatPDF
+## example17
 
-Para executar o projeto do ChatPDF, basta entrar no diretorio do projeto e executar os scripts abaixo:
+Para executar o projeto example17, basta entrar no diretorio do projeto e executar os scripts abaixo:
 
 ```
-$ python chatPdf.py
-$ streamlit run chatPdf.py  
+$ python example17.py
+$ streamlit run example17.py  
 ```
