@@ -64,7 +64,7 @@ $ nvidia-smi
 Apos isso instale a versão correta da CUDA, no caso a versão '12.1':
 
 ```
-$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 :: 
+$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
 Verifique se a ver~soa foi instalada corretamente, e se retornou 'True':
